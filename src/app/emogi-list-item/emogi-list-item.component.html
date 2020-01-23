@@ -1,0 +1,16 @@
+<div class="emoji-list-item">
+    <span class="emoji-list-item__name">{{id}}</span> 
+    <a href="{{url}}" class="emoji-list-item__url">{{url}}</a>
+    <div class="emoji-list-item__preview">
+        <img src="{{url}}" alt="Emoji adress" class="preview" 
+            [ngClass]="{'preview_filter_light': emojiFavorite}">
+    </div>
+    <div class="emoji-list-item__actions">
+        <i *ngIf="showFavoriteBtn" class="fa-star button button__favorite" 
+            [ngClass]="{'button__favorite_color_gold': emojiFavorite,
+                        'far': !emojiFavorite,
+                        'fas': emojiFavorite}" (click)="clickFavoriteBtn()"></i>
+        <i *ngIf="showDeleteBtn" class="fas fa-times button button__delete" (click)="clickDeleteBtn()"></i>
+        <i *ngIf="showReturnBtn" class="fas fa-undo-alt button button__return" (click)="clickReturnBtn()"></i>
+    </div>
+</div>

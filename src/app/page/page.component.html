@@ -1,0 +1,18 @@
+<i *ngIf="preloader" class="fas fa-spinner preloader"></i>
+<div class="page-app">
+    <header class="header">
+        <h1 class="header__title">{{title}} эмоджи</h1>
+        <div class="search">
+            <app-search></app-search>
+        </div>
+    </header>
+    <div class="emoji-list-header">
+        <span class="emoji-list-header__name">Имя</span>
+        <span class="emoji-list-header__url">Ссылка</span>
+        <span class="emoji-list-header__preview">Превью</span>
+        <span class="emoji-list-header__actions">Действия</span>
+    </div>
+    <section class="emoji-list">
+        <app-emogi-list-item *ngFor="let emoji of emojies" [emoji]="emoji" [pageType]="pageType"></app-emogi-list-item>  
+    </section>
+</div>

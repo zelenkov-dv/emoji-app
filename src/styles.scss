@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("./css/all.css");
+@import url("./reset.css");
+body {
+    background-color: lightgrey;
+}
+
+.preloader {
+    animation: 1s linear 0s normal none infinite running rot;
+    -webkit-animation: 1s linear 0s normal none infinite running rot;
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+    font-size: 7rem;
+  }
+  @keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
